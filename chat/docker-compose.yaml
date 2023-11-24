@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  chatapp:
+    container_name: chatapp
+    build: .
+    networks:
+      - integration-network
+    ports: 
+     - "8501:8501"
+    environment:
+      - PGVECTOR_DRIVER=psycopg2
+      - PGVECTOR_HOST=vectordb
+      - PGVECTOR_PORT=5432
+      - PGVECTOR_DATABASE=postgres
+      - PGVECTOR_USER=postgres
+      - PGVECTOR_PASSWORD=example
+      - OPENAI_ORGANIZATION=
+      - OPENAI_API_KEY=
+      - PGVECTOR_CONNECTION_STRING=postgresql+psycopg2://postgres:example@vectordb:5432/postgres
+  vectordb:
+    container_name: vectordb
+    image: ankane/pgvector
+    restart: always
+    networks:
+      - integration-network
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=example
+networks:
+  integration-network:
+    external: false
+    driver: bridge

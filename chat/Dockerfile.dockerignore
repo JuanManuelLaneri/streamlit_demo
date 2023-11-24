@@ -1,0 +1,79 @@
+# General
+.DS_Store
+**/*.py[cod]
+**/__pycache__
+**/*.egg*
+**/dist
+**/build
+**/*.env
+**/.idea
+**/.python-version
+**/pytest.ini
+**/*.example
+**/.aws
+**/.git
+**/*.md
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage*
+.cache
+**/*.log
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Git
+.git*
+
+# CI
+**/*.jenkinsfile
+
+# Docker
+docker-compose.yml
+Dockerfile
+.docker*
+
+# Distribution / packaging
+env/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.installed.cfg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Virtual environment
+.venv/
+
+# PyCharm
+.idea
+
+# Python mode for VIM
+**/.ropeproject
+
+# Vim swap files
+**/*.swp
+
+# VS Code
+.vscode

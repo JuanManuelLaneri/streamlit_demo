@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+langchain = "*"
+streamlit = "*"
+python-dotenv = "*"
+openai = "*"
+#pm-policy-chat = {file = ".", editable = true}
+pgvector = "*"
+psycopg2-binary = "*"
+tiktoken = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
